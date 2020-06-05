@@ -10,3 +10,4 @@
    },
    C. `npm run dev` or `npm run start` throws an error
    D. create "pages" directory under the project root folder
+   E: Next creates automatically routes for every file under the "pages" folder. We do not have to use react router, we don not have to define routes explicitly.
