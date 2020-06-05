@@ -2,7 +2,7 @@ import Navbar from "../components/Navbar";
 
 const Index = () => (
   <div>
-    <Navbar />
+    {/* <Navbar />  --> moved to _app.js */} 
     <h1>Our Index Page !!!</h1>
   </div>
 )

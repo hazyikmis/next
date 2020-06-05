@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 const AboutPage = () => {
   return (
     <>
-      <Navbar />
+      {/* <Navbar />  --> moved to _app.js */}
       <h1>THIS IS THE about PAGE!</h1>
     </>
   );
