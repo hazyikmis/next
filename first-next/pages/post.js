@@ -1,13 +1,14 @@
-import { withRouter } from "next/router";
-
-const Post = (props) => (
+const Post = ({id}) => (
   <>
     <h1>POST PAGE</h1>
-    <h3>You are looking at post #{props.router.query.id}</h3>
+    <h3>You are looking at post #{id}</h3>
   </>
 );
 
-export default withRouter(Post);
-//withRouter hoc helps us to access query parameters
-//check from the F12-Console-Components, Post component has "router" prop and
-//under this props there are many data
+Post.getInitialProps = async({query}) => {
+  return query;
+}
+
+
+export default Post;
+//using getInitialProps chosen and withRouter hoc solution did not preferred here (check post1.js)
