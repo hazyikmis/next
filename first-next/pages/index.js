@@ -10,7 +10,7 @@ const Index = ({ posts }) => (
     <ul>
       {posts.map((post) => (
         <li key={post.id}>
-          <Link href={`/post?id=${post.id}`}>
+          <Link href={`/post?id=${post.id}`} as={`/p/${post.id}`}>
             <a>{post.title}</a>
           </Link>
         </li>
@@ -18,6 +18,11 @@ const Index = ({ posts }) => (
     </ul>
   </div>
 );
+
+//If you want to hide query string params or page/route names shown in the url-bar from the user
+//you can use "as" props of the Link, but not much advised!
+//<Link href={`/post?id=${post.id}`} as="doggie">...</Link>
+
 
 //this static "getInitialProps" works in the server-side at first
 //and then the further routes to the same page causes that
