@@ -1,3 +1,8 @@
+//ORIGINALLY THIS FILE COPIED FROM AND PASTED INTO HERE.
+//IN EVERY ROUTE, ALL PAGES/ROUTES RENDERED INSIDE THIS MyApp Component
+//Means, this is a wrapper class / hoc for all pages. So its a beautiful place to
+//put Navbar, footer etc inside here and think this component as a LAYOUT for all pages/routes
+
 //import App, { Container } from "next/app";
 import Navbar from "../components/Navbar";
 
@@ -8,6 +13,7 @@ function MyApp({ Component, pageProps }) {
     <div>
       <Navbar />
       <Component {...pageProps} />
+      <p>Footer</p>
     </div>
     //</Container>
   );

@@ -1,6 +1,6 @@
-import Navbar from "../components/Navbar";
+//import Navbar from "../components/Navbar";
 
-const ContactPAge = () => {
+const ContactPage = () => {
   //console.log("CONTACT PAGE RENDERED");
   return (
     <div>
@@ -11,4 +11,4 @@ const ContactPAge = () => {
   );
 };
 
-export default ContactPAge;
+export default ContactPage;
