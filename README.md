@@ -4,10 +4,10 @@
    1. to create next app run the command `npm install react react-dom next`
    2. the scripts added to package.json:
    "scripts": {
-   "dev": "next",
-   "build": "next build",
-   "start": "next start"
-   },
+      "dev": "next",
+      "build": "next build",
+      "start": "next start"
+      },
    3. `npm run dev` or `npm run start` throws an error
    4. create "pages" directory under the project root folder
    5. Next creates automatically routes for every file under the "pages" folder. We do not have to use react router, we don not have to define routes explicitly.
@@ -21,3 +21,9 @@
       - req - HTTP request object (server only)
       - res - HTTP response object (server only)
       - err - Error object if any error is encountered during the rendering
+   8. After adding server.js file we need to make some changes on the package.json. Because, we are calling next in this file and creating a next server which is listening port 3000. Since "next" is defined and called from this server file, we no longer need to call "next" from package json:
+   "scripts": {
+      "dev": "node server1.js",
+      "build": "next build",
+      "start": "NODE_ENV=production node server1.js"
+      }
