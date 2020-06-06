@@ -14,7 +14,15 @@ app.prepare().then(() => {
     const parsedUrl = parse(req.url, true);
     const { pathname, query } = parsedUrl;
     //every req coming to the server handled by the "handle" method which is a part of nextjs 
-    handle(req, res, parsedUrl);
+    
+    //handle(req, res, parsedUrl);
+
+    if (pathname === "/chicken") {
+      app.render(req, res, "/contact", query)
+    } else {
+      handle(req, res, parsedUrl);
+    }
+
     /*
     if (pathname === '/a') {
       app.render(req, res, '/a', query)

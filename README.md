@@ -27,3 +27,5 @@
       "build": "next build",
       "start": "NODE_ENV=production node server1.js"
       }
+   9. server1.js & server2.js are different. You have to change from package.json which server do you prefer. 
+   server1.js is pure next app and creates http server and tries to manage routes in basic manners, but server2.js is next app and uses express server app to manage routing. (As you remember, in express, routes like "post/:postId/blah/:blahId" are very common. In server2.js, with the help of express, we are trying to make the same thing for next app)
